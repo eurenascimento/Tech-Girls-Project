@@ -15,14 +15,27 @@ body{
 }
 
 /* --- CABEÇALHO --- */
-
+/* --- Atualização do Cabeçalho --- */
 .meu-cabecalho{
   background-color: #4B2189;
   padding: 12px 20px;
-  border-radius: 20px; /*cantos arredondados*/
+  border-radius: 37px; /*cantos arredondados*/
   margin-bottom: 24px; /* Espaço entre o cabeçalho e o conteúdo abaixo */
   display: flex;
-  align-items: center;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 15px /* Cria um espaço entre a imagem e o texto */
+}
+
+/* --- Novo estilo pra garantir que a imagem não fique gigante --- */
+
+.logo-cabecalho {
+  width: 40px !important; /* tamanho da imagem */
+  height: 40px !important;
+  max-width: 40px;
+  max-height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 .meu-cabecalho h1 {
