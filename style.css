@@ -24,6 +24,11 @@ body{
   display: flex;
   align-items: center;
 }
+.meu-cabecalho img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
 
 .meu-cabecalho h1 {
   color: #F3EFF8; /* Mesma cor do background do body */
