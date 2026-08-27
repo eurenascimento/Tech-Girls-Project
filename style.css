@@ -25,9 +25,13 @@ body{
   align-items: center;
 }
 .meu-cabecalho img {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  background-color: white;
+  
+  
+  
 }
 
 .meu-cabecalho h1 {
