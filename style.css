@@ -20,10 +20,16 @@ body {
 
 /* --- CABEÇALHO --- */
 .meu-cabecalho {
+  position: absolute; /* faz o cabeçalho flutuar */
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* centraliza na tela */
+  z-index: 10;
+  
   background-color: #4B2189;
   padding: 12px 20px;
   border-radius: 37px;
-  margin: 20px auto 32px auto;
+  margin: 0;
   max-width: 850px;
   width: calc(100% - 32px);
   display: flex;
@@ -67,16 +73,17 @@ body {
   width: 100%;
   
   /* AUMENTADO: Altura maior para mostrar melhor a foto no PC */
-  height: 480px; 
-  
+  height: 520px; 
   border-radius: 0 !important;
   overflow: hidden;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin-bottom: 40px;
+  
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Imagens de Fundo */
