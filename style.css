@@ -71,7 +71,6 @@ body {
 .hero-banner {
   position: relative;
   width: 100%;
-  
   /* AUMENTADO: Altura maior para mostrar melhor a foto no PC */
   height: 520px; 
   border-radius: 0 !important;
@@ -97,15 +96,22 @@ body {
 
 /* Texto sobreposto na imagem */
 .overlay-hero {
+  position: absolute; /* Trava o texto na base do banner */
+  bottom: 0;/* Encosta no rodapé no banner */
+  left: 0;
+  right: 0;
   max-width: 850px;
   width: 100%;
   margin: 0 auto;
   padding: 24px;
   color: #ffffff;
+  z-index: 5; /* Mantém acima da foto e do gradiente */
 }
 
 .subtitulo-hero {
-  font-size: 1rem;
+  /* cor lilás claro */
+  color: #F3EFF8;
+  font-size: 2.0rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: bold;
