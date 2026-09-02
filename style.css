@@ -171,3 +171,7 @@ p {
 .secao-projetos {
   margin-top: 60px;
 }
+
+.secao.projetos h2 {
+   margin-bottom: 25px;
+}
