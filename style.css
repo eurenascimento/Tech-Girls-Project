@@ -1,4 +1,38 @@
-/* --- RESETS E BASE --- */
+/* ==========================================================================
+   DESIGN TOKENS (HUB-001)
+   ========================================================================== */
+:root {
+  /* Cores Principais da Marca */
+  --color-primary: #4B2189;        /* Roxo Profundo Tech Girls */
+  --color-primary-light: #F3EFF8;  /* Lilás Claro / Fundo */
+  --color-text-dark: #222222;      /* Texto Escuro */
+  --color-white: #ffffff;
+  
+  /* Tipografia */
+  --font-family-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-size-base: 1rem;          /* 16px */
+  --font-size-paragraph: 1.15rem;  /* ~18px para leitura confortável */
+  --font-size-h3: 1.25rem;
+  --font-size-h2: 2.2rem;
+  --font-size-hero: 1.8rem;
+
+  /* Espaçamentos e Estrutura */
+  --container-max-width: 850px;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 60px;
+  
+  /* Transições e Bordas */
+  --border-radius-card: 12px;
+  --border-radius-pill: 37px;
+  --transition-fast: 0.2s ease-in-out;
+}
+
+/* ==========================================================================
+   RESETS E CONFIGURAÇÕES BASE
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -7,171 +41,182 @@
 
 html, body {
   width: 100%;
-  overflow-x: hidden; /* Evita rolagens horizontais indesejadas */
+  overflow-x: hidden;
 }
 
 body {
-  background-color: #F3EFF8;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  color: #333;
+  background-color: var(--color-primary-light);
+  font-family: var(--font-family-base);
+  color: var(--color-text-dark);
+  line-height: 1.6;
 }
 
-/* --- CABEÇALHO --- */
+/* ==========================================================================
+   CABECALHO FLUTUANTE (TOP BAR)
+   ========================================================================== */
 .meu-cabecalho {
-  position: absolute; /* faz o cabeçalho flutuar */
+  position: absolute;
   top: 20px;
   left: 50%;
-  transform: translateX(-50%); /* centraliza na tela */
+  transform: translateX(-50%);
   z-index: 10;
-  
-  background-color: #4B2189;
-  padding: 12px 20px;
-  border-radius: 37px;
-  margin: 0;
-  max-width: 850px;
+  background-color: var(--color-primary);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-pill);
+  max-width: var(--container-max-width);
   width: calc(100% - 32px);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: var(--spacing-sm);
 }
 
 .logo-cabecalho {
-  width: 40px !important;
-  height: 40px !important;
-  max-width: 40px;
-  max-height: 40px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
   border-radius: 50%;
 }
 
 .meu-cabecalho h1 {
-  color: #F3EFF8;
+  color: var(--color-primary-light);
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-/* --- ESTRUTURA VERTICAL --- */
-.main-container {
-  max-width: 850px; /* Limita a largura do texto para boa leitura */
-  margin: 0 auto;
-  padding: 0 16px 0 0px; /*Reduzi o espaçamento da esquerda (estava 16px)*/
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-
-.secao-destaque {
-  width: 100%;
-}
-
-/* --- HERO BANNERS --- */
+/* ==========================================================================
+   HERO BANNERS (LARGURA TOTAL)
+   ========================================================================== */
 .hero-banner {
   position: relative;
   width: 100%;
-  /* AUMENTADO: Altura maior para mostrar melhor a foto no PC */
-  height: 520px; 
-  border-radius: 0 !important;
-  overflow: hidden;
+  height: 520px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 40px;
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
 }
 
-/* Imagens de Fundo */
 .community-hero {
-  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.75)), url('img-techgirls.jpg'); 
+  background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.8)), url('img-techgirls.jpg');
 }
 
-.creator-hero {
-  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.75)), url('projetoo.jpeg'); 
-}
-
-/* Texto sobreposto na imagem */
 .overlay-hero {
-  position: absolute; /* Trava o texto na base do banner */
-  bottom: 0;/* Encosta no rodapé no banner */
+  position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
-  max-width: 850px;
+  max-width: var(--container-max-width);
   width: 100%;
   margin: 0 auto;
-  padding: 24px;
-  color: #ffffff;
-  z-index: 5; /* Mantém acima da foto e do gradiente */
+  padding: var(--spacing-md);
+  z-index: 5;
 }
 
 .subtitulo-hero {
-  /* cor lilás claro */
-  color: #F3EFF8;
-  font-size: 2.0rem;
+  color: var(--color-primary-light);
+  font-size: var(--font-size-hero);
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-weight: bold;
-  opacity: 0.95;
-}
-
-/* --- TÍTULO GRANDE --- */
-.titulo-destaque {
-  color: #4B2189;
-  font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 20px;
-  line-height: 1.1;
-  position: relative;
-  left: -35px;
 }
 
-/* --- TIPOGRAFIA DO CORPO --- */
-h4 {
-  color: #4B2189;
-  margin-top: 20px;
-  margin-bottom: 6px;
-  font-size: 1.1rem;
-  position: relative;
-  left: -35px;
+/* ==========================================================================
+   ESTRUTURA PRINCIPAL & SEÇÕES
+   ========================================================================== */
+.main-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.titulo-destaque {
+  color: var(--color-primary);
+  font-size: var(--font-size-h2);
+  font-weight: 800;
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.2;
 }
 
 p {
-  margin-bottom: 14px;
-  line-height: 1.6;
-  font-size: 1.30rem;
-  position: relative;
-  left: -20px; /* movendo os paragrafos um pouco mais para esquerda */
+  margin-bottom: 16px;
+  font-size: var(--font-size-paragraph);
 }
 
-/* --- RESPONSIVIDADE (CELULAR E TABLET) --- */
+.frentes-atuacao h3 {
+  color: var(--color-primary);
+  margin-top: var(--spacing-sm);
+  margin-bottom: 4px;
+  font-size: var(--font-size-h3);
+}
+
+/* ==========================================================================
+   GRID DE PROJETOS (HUB-004: RESPONSIVIDADE)
+   ========================================================================== */
+.secao-projetos {
+  width: 100%;
+}
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.projeto-card {
+  background-color: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-card);
+  border-left: 5px solid var(--color-primary);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-fast);
+}
+
+.projeto-card:hover {
+  transform: translateY(-4px);
+}
+
+.projeto-card h3 {
+  color: var(--color-primary);
+  font-size: var(--font-size-h3);
+  margin-bottom: var(--spacing-xs);
+}
+
+.projeto-card p {
+  font-size: 1rem;
+  margin-bottom: 0;
+  color: #555;
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+.rodape-site {
+  text-align: center;
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  background-color: var(--color-primary);
+  color: var(--color-primary-light);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES / RESPONSIVIDADE (HUB-004)
+   ========================================================================== */
 @media (max-width: 768px) {
-  .main-container {
-    gap: 40px;
-  }
-
   .hero-banner {
-    /* AUMENTADO: Altura maior para destacar a imagem na tela do celular */
-    height: 380px; 
-    margin-bottom: 30px;
+    height: 380px;
   }
 
-  .creator-hero {
-     height: 300px;
-  }
-  
   .titulo-destaque {
     font-size: 1.8rem;
   }
-}
 
-.secao-projetos {
-  margin-top: 60px;
-}
-
-.secao-projetos h2 {
-   margin-bottom: 25px;
+  .subtitulo-hero {
+    font-size: 1.3rem;
+  }
 }
