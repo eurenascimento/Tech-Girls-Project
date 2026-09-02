@@ -159,7 +159,19 @@ p {
     margin-bottom: 30px;
   }
 
+  .creator-hero {
+     height: 300px;
+  }
+  
   .titulo-destaque {
     font-size: 1.8rem;
   }
+}
+
+.secao-projetos {
+  margin-top: 60px;
+}
+
+.secao-projetos h2 {
+   margin-bottom: 25px;
 }
