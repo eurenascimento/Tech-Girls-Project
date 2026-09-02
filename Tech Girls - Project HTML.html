@@ -3,115 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to TECH GIRLS!</title>
+  <title>Welcome to TECH GIRLS! - Hub de Portfólios</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 1º BANNER: COMUNIDADE (LARGURA TOTAL - FORA DO MAIN) -->
+  <!-- 1º BANNER / HERO PRINCIPAL DA COMUNIDADE -->
   <div class="hero-banner community-hero">
-    
-    <!-- CABEÇALHO -->
-<header class="meu-cabecalho">
-  <img src="img-techgirls.jpg" alt="Logo da Tech Girls" class="logo-cabecalho">
-  <h1>Tech Girls</h1>
-</header>
+    <!-- Cabeçalho Acessível e Flutuante -->
+    <header class="meu-cabecalho" role="banner">
+      <img src="img-techgirls.jpg" alt="Logo oficial da comunidade Tech Girls" class="logo-cabecalho">
+      <h1>Tech Girls</h1>
+    </header>
 
     <div class="overlay-hero">
-      <span class="subtitulo-hero">BEM-VINDOS À TECH GIRLS!</span>
+      <span class="subtitulo-hero">BEM-VINDAS À TECH GIRLS!</span>
     </div>
   </div>
-  
-  <!-- CONTEÚDO DA SEÇÃO 1: QUEM SOMOS -->
+
+  <!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
   <main class="main-container">
-    <section class="secao-destaque">
-      <h2 class="titulo-destaque">QUEM SOMOS</h2>
+    
+    <!-- SEÇÃO: QUEM SOMOS -->
+    <section class="secao-destaque" aria-labelledby="titulo-quem-somos">
+      <h2 id="titulo-quem-somos" class="titulo-destaque">QUEM SOMOS</h2>
       
-      <p>Somos uma comunidade feita <strong>por e para mulheres</strong> que vivem ou querem <strong> viver a tecnologia</strong>.</p>
+      <p>Somos uma comunidade feita <strong>por e para mulheres</strong> que vivem ou querem <strong>viver a tecnologia</strong>.</p>
       
-      <p>Nosso espaço reúne desde profissionais com <strong>anos de bagagem e mercado</strong> até quem <strong>acabou de entrar na faculdade</strong>, trocando os primeiros códigos e buscando a tão sonhada <strong>primeira oportunidade.</strong></p>
+      <p>Nosso espaço reúne desde profissionais com <strong>anos de bagagem e mercado</strong> até quem <strong>acabou de entrar na faculdade</strong>, trocando os primeiros códigos e buscando a tão sonhada <strong>primeira oportunidade</strong>.</p>
       
-      <p>Pra fazer a <strong>diferença</strong> na <strong>prática</strong>, nossa rede se organiza em frentes focadas na <strong> evolução </strong> de cada integrante:</p>
+      <p>Pra fazer a <strong>diferença</strong> na <strong>prática</strong>, nossa rede se organiza em frentes focadas na <strong>evolução</strong> de cada integrante:</p>
       
-      <h4>Conversas e Network:</h4>
-      <p>Troca livre de experiências, dúvidas, apoio diário e conexões reais.</p>
-      
-      <h4>Vagas de TI:</h4>
-      <p>Compartilhamento direto de oportunidades para todos os níveis — de <strong>Estágio e Trainee a cargos sênior.</strong></p>
-      
-      <h4>LinkedIn e Portfólio:</h4>
-      <p>Suporte mútuo pra estruturar perfis de impacto, expandir a rede e construir portfólios do zero.</p>
-      
-      <h4>English Talk:</h4>
-      <p>Espaço prático e seguro para treinar o inglês focado na carreira tech.</p>
-      
-      <h4>Materiais de Estudo:</h4>
-      <p>Curadoria colaborativa de cursos, livros, artigos e guias.</p>
-      
-      <h4>Projetos e Desafios:</h4>
-      <p>Desafios semanais e projetos práticos para colocar a mão na massa e evoluir o conhecimento técnico juntas.</p>
-      
+      <article class="frentes-atuacao">
+        <h3>Conversas e Network:</h3>
+        <p>Troca livre de experiências, dúvidas, apoio diário e conexões reais.</p>
+        
+        <h3>Vagas de TI:</h3>
+        <p>Compartilhamento direto de oportunidades para todos os níveis — de <strong>Estágio e Trainee a cargos sênior</strong>.</p>
+        
+        <h3>LinkedIn e Portfólio:</h3>
+        <p>Suporte mútuo pra estruturar perfis de impacto, expandir a rede e construir portfólios do zero.</p>
+        
+        <h3>English Talk:</h3>
+        <p>Espaço prático e seguro para treinar o inglês focado na carreira tech.</p>
+        
+        <h3>Materiais de Estudo:</h3>
+        <p>Curadoria colaborativa de cursos, livros, artigos e guias.</p>
+        
+        <h3>Projetos e Desafios:</h3>
+        <p>Desafios semanais e projetos práticos para colocar a mão na massa e evoluir o conhecimento técnico juntas.</p>
+      </article>
+
       <p>Seja para aprender, ensinar ou construir o futuro da tecnologia lado a lado, este é o nosso ponto de encontro.</p>
+      
+      <p>Além dos subgrupos, atualmente a comunidade está desenvolvendo seu primeiro projeto: <strong>ESTE SITE QUE VOCÊ ESTÁ NAVEGANDO AGORA MESMO!</strong></p>
+        
+      <p>Ele funciona em torno de diferentes grupos, com diferentes funções, para melhor desenvolvimento e qualidade das funcionalidades do nosso projeto.</p>
+      
+      <p>Cada grupo contém entre 3 a 5 pessoas, que juntas, planejam e "criam" o projeto do 0.</p>
     </section>
-  </main>
 
-  <!-- 2º BANNER: FUNDADORA (LARGURA TOTAL - FORA DO MAIN) -->
-  <div class="hero-banner creator-hero">
-    <div class="overlay-hero">
-      <span class="subtitulo-hero">Giselle Costa: Criadora da Tech Girls.</span>
-    </div>
-  </div>
-
-  <!-- CONTEÚDO DA SEÇÃO 2: SOBRE A CRIADORA -->
-  <main class="main-container">
-    <section class="secao-destaque">
-      <h2 class="titulo-destaque">SOBRE A CRIADORA</h2>
+    <!-- SEÇÃO: PROJETOS PRÁTICOS -->
+    <section class="secao-projetos" aria-labelledby="titulo-projetos">
+      <h2 id="titulo-projetos" class="titulo-destaque">Projetos Práticos da Comunidade Tech Girls</h2>
       
-      <div class="texto-apresentacao">
-        <p>Diretamente do RJ, Giselle Costa, fundadora da comunidade, passou por uma transição de carreira vinda da área da saúde (Biomedicina) para o universo da tecnologia. Hoje, além de graduanda em ciências da computação, atua como Engenheira de Dados e criadora de conteúdo Tech.</p>
-        <p>A ideia de criar o grupo surgiu exatamente da sua própria jornada: construir a rede de apoio que sentiu falta no início. O objetivo é oferecer um espaço seguro, acolhedor e real para que mulheres possam trocar experiências, acelerar estudos e conquistar com confiança o seu espaço no mercado Tech!</p>
+      <div class="projetos-grid">
+        <article class="projeto-card">
+          <h3>Dev e Dados</h3>
+          <p>Dashboard Web de Vendas e Atendimento</p>
+        </article>
+
+        <article class="projeto-card">
+          <h3>Front e Automação de Dados</h3>
+          <p>Portal de Automação de Relatórios e Tarefas</p>
+        </article>
+
+        <article class="projeto-card">
+          <h3>Fullstack Starter</h3>
+          <p>Sistema Web de Gestão de Tarefas (CRUD)</p>
+        </article>
+
+        <article class="projeto-card">
+          <h3>Gestão, QA e Governança</h3>
+          <p>Framework de Governança, Arquitetura e QA</p>
+        </article>
+
+        <article class="projeto-card">
+          <h3>Documentação Técnica</h3>
+          <p>Manual de Onboarding e Documentação de TI</p>
+        </article>
+
+        <article class="projeto-card">
+          <h3>Análise de Dados e BI (Grupo A)</h3>
+          <p>Dashboard Executivo de Indicadores</p>
+        </article>
+
+        <article class="projeto-card">
+          <h3>Engenharia de Dados (Grupo B)</h3>
+          <p>Pipeline de Dados (ETL) e Data Warehouse</p>
+        </article>
       </div>
-      <!-- SEÇÃO 3: PROJETOS PRÁTICOS DA COMUNIDADE -->
-<section class="secao-projetos">
-<h2>Projetos Práticos da Comunidade Tech Girls</h2>
-  <div class="projeto-card">
-    <h3>Dev e Dados</h3>
-    <p>Dashboard Web de Vendas e Atendimento</p>
-</div>
-  <!-- Equipe 2 -->
-  <div class="projeto-card">
-    <h3>Front e Automação de Dados</h3>
-    <p>Portal de Automação de Relatórios e Tarefas</p>
-  </div>
-  <!-- Equipe 3 -->
-  <div class="projeto-card">
-     <h3> Fullstack Starter</h3>
-     <p>Sistema Web de Gestão de Tarefas (CRUD)</p>
-  </div>
-  <!-- Equipe 4 -->
-  <div class="projeto-card">
-    <h3>Gestão, QA e Governança</h3>
-    <p>Framework de Gorvernança, Arquitetura e QA</p>
-  </div>
-  <!-- Equipe 5 -->
-  <div class="projeto-card">
-      <h3> Documentação Técnica</h3>
-      <p>Manual de Onboarding e Doumentação de TI</p>
-  </div>
-  <!-- Equipe 7 -->
-  <div class="projeto-card">
-      <h3> Análise de Dados e BI(Grupo A)</h3>
-      <P>Dashboard Executivo de Indicadores</P>
-  </div>
-  <!-- Equipe 8 -->
-  <div class="projeto-card">
-      <h3> Engenharia e Dados (Grupo B)</h3>
-      <p>Pipeline de Dados(ETL) e Data Warehouse</p>
-  </div>
-  
-</section>
-      
-    
+    </section>
+
   </main>
-  </body>
+
+  <!-- RODAPÉ ACESSÍVEL DO SITE -->
+  <footer class="rodape-site">
+    <p>&copy; 2026 Tech Girls Community. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
 </html>
