@@ -92,7 +92,6 @@ body {
 
 .creator-hero {
   background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.75)), url('projetoo.jpeg'); 
-  height:380px;
 }
 
 /* Texto sobreposto na imagem */
