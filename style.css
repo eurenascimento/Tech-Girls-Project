@@ -220,3 +220,140 @@ p {
     font-size: 1.3rem;
   }
 }
+
+/* --- BOTÕES DOS GRUPOS --- */
+.instrucao-projetos {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1rem;
+  color: #555;
+}
+
+.projeto-card-btn {
+  background-color: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-card);
+  border: none;
+  border-left: 5px solid var(--color-primary);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  font-family: inherit;
+}
+
+.projeto-card-btn:hover,
+.projeto-card-btn:focus {
+  transform: translateY(-4px);
+  background-color: #ffffff;
+  outline: 2px solid var(--color-primary);
+}
+
+.projeto-card-btn.ativo {
+  background-color: var(--color-primary);
+  color: var(--color-primary-light);
+}
+
+.projeto-card-btn.ativo h3,
+.projeto-card-btn.ativo p {
+  color: var(--color-primary-light);
+}
+
+.projeto-card-btn h3 {
+  color: var(--color-primary);
+  font-size: var(--font-size-h3);
+  margin-bottom: var(--spacing-xs);
+}
+
+.projeto-card-btn p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  color: #555;
+}
+
+/* --- LINHA DE DIVISÃO ROXA --- */
+.divisor-roxo {
+  border: none;
+  height: 3px;
+  background-color: var(--color-primary); /* Roxo do mascote (#4B2189) */
+  margin: var(--spacing-lg) 0;
+  border-radius: 2px;
+}
+
+/* --- PAINEL DE INTEGRANTES --- */
+.painel-integrantes.escondido {
+  display: none;
+}
+
+.painel-integrantes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.titulo-grupo-selecionado {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.integrantes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+/* CARTÃO INDIVIDUAL DE INTEGRANTE (HUB-003) */
+.integrante-card {
+  background: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-card);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.integrante-card h4 {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+
+.especialidade-tag {
+  display: inline-block;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.links-integrante {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-xs);
+}
+
+.link-perfil {
+  color: var(--color-primary);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: 1px solid var(--color-primary);
+  padding: 4px 10px;
+  border-radius: 16px;
+  transition: all var(--transition-fast);
+}
+
+.link-perfil:hover {
+  background-color: var(--color-primary);
+  color: var(--color-primary-light);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
